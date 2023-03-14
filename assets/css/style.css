@@ -12,6 +12,7 @@
     left: 47%;
     background-color: white;
     border-radius: 50%;
+    border: none;
     padding: 0.125rem 0.5rem;
 }
  .prev {
