@@ -4,6 +4,6 @@
     box-sizing: border-box;
 }
 
-.images img:not(.active){
+.carousel img:not(.active){
     display: none;
 }
