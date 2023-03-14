@@ -39,7 +39,7 @@ prevpic.addEventListener('click', function (){
     console.log('foto precedente')
 
     console.log(slidesImagesElements);
-    const currentpic = slidesImagesElements(activeImage)
+    const currentpic = slidesImagesElements[activeImage]
     console.log(currentpic);
     //remove the active class from the current pic
     currentpic.classList.remove('active')
@@ -57,7 +57,7 @@ nextpic.addEventListener('click', function (){
     console.log('foto successiva')
 
     console.log(slidesImagesElements);
-    const currentpic = slidesImagesElements(activeImage)
+    const currentpic = slidesImagesElements[activeImage]
     console.log(currentpic);
     //remove the active class from the current pic
     currentpic.classList.remove('active')
