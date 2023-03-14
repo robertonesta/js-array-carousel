@@ -7,3 +7,16 @@
 .carousel img:not(.active){
     display: none;
 }
+
+.prev, .next{
+    left: 47%;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.125rem 0.5rem;
+}
+ .prev {
+    top: 1%
+ }
+ .next {
+    bottom: 1%
+ }
