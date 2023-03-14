@@ -5,3 +5,11 @@ Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella mile
 const imgEl = document.getElementById("carousel");
 const previousImg = document.getElementById("prev")
 const nextImg = document.getElementById("next")
+
+const carousel = [
+    "./assets/img/01.webp",
+    "./assets/img/02.webp",
+    "./assets/img/03.webp",
+    "./assets/img/04.webp",
+    "./assets/img/05.webp"
+]
