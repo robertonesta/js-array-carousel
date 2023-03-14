@@ -46,9 +46,26 @@ prevpic.addEventListener('click', function (){
     //decrement the value of the active image
     activeImage--
     console.log(activeImage)
-    const prevImage = slidesImagesElements[activeImage]
+    const nextImage = slidesImagesElements[activeImage]
     //active class
-    console.log(prevImage);
-    prevImage.classList.add('active')
+    console.log(nextImage);
+    nextImage.classList.add('active')
+})
+//eventlistener on the next button
+const nextpic = document.querySelector('.next')
+nextpic.addEventListener('click', function (){
+    console.log('foto successiva')
 
+    console.log(slidesImagesElements);
+    const currentpic = slidesImagesElements(activeImage)
+    console.log(currentpic);
+    //remove the active class from the current pic
+    currentpic.classList.remove('active')
+    //decrement the value of the active image
+    activeImage++
+    console.log(activeImage)
+    const nextImage = slidesImagesElements[activeImage]
+    //active class
+    console.log(nextImage);
+    nextImage.classList.add('active')
 })
