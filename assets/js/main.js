@@ -24,9 +24,31 @@ let activeImage = 0;
 
 for (i = 0; i < carousel.length; i++) {
     const imgSrc = carousel[i];
-    const imgElement = `<img class="img-fluid ${i === activeImage ? 'active' : ''}" src="${imgSrc}" alt="">`
+    const imgElement = `<img class="img-fluid ${i === activeImage ? 'active' : ''}" src="${imgSrc}" alt="">`;
     console.log(imgElement);
 
    // InnerHTML
    imgEl.innerHTML += imgElement;
 }
+//select the slides
+const slidesImagesElements = document.querySelectorAll('.slider > .carousel > img')
+
+//eventlistener on the prev button
+const prevpic = document.querySelector('.prev')
+prevpic.addEventListener('click', function (){
+    console.log('foto precedente')
+
+    console.log(slidesImagesElements);
+    const currentpic = slidesImagesElements(activeImage)
+    console.log(currentpic);
+    //remove the active class from the current pic
+    currentpic.classList.remove('active')
+    //decrement the value of the active image
+    activeImage--
+    console.log(activeImage)
+    const prevImage = slidesImagesElements[activeImage]
+    //active class
+    console.log(prevImage);
+    prevImage.classList.add('active')
+
+})
