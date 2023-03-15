@@ -9,7 +9,7 @@ const previous = document.getElementById("prev")
 const next = document.getElementById("next")
 
 const carousel = [
-    './assets/img/02.webp',
+    './assets/img/01.webp',
     './assets/img/02.webp',
     './assets/img/03.webp',
     './assets/img/04.webp',
@@ -27,8 +27,8 @@ for (i = 0; i < carousel.length; i++) {
     const imgElement = `<img class="img-fluid ${i === activeImage ? 'active' : ''}" src="${imgSrc}" alt="">`;
     console.log(imgElement);
 
-   // InnerHTML
-   imgEl.innerHTML += imgElement;
+    //innerHTML    
+    imgEl.innerHTML += imgElement
 }
 //select the slides
 const slidesImagesElements = document.querySelectorAll('.slider > .carousel > img')
@@ -43,13 +43,20 @@ prevpic.addEventListener('click', function (){
     console.log(currentpic);
     //remove the active class from the current pic
     currentpic.classList.remove('active')
+
+    if(activeImage === 0) {
+        activeImage = slidesImagesElements.length -1
+    } else {
     //decrement the value of the active image
     activeImage--
     console.log(activeImage)
+    }
+    
     const nextImage = slidesImagesElements[activeImage]
     //active class
     console.log(nextImage);
     nextImage.classList.add('active')
+
 })
 //eventlistener on the next button
 const nextpic = document.querySelector('.next')
@@ -61,11 +68,18 @@ nextpic.addEventListener('click', function (){
     console.log(currentpic);
     //remove the active class from the current pic
     currentpic.classList.remove('active')
-    //decrement the value of the active image
+
+    if (activeImage === slidesImagesElements.length -1) {
+        activeImage = 0
+    } else {
+    //increment the value of the active image
     activeImage++
     console.log(activeImage)
+    }
+
     const nextImage = slidesImagesElements[activeImage]
     //active class
     console.log(nextImage);
     nextImage.classList.add('active')
+
 })
